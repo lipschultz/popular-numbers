@@ -1,5 +1,7 @@
 [
- {"test" : "lambda formula, result, context: is_prime(result) and (result - 1) % 4 == 0",
+ {"test" : [
+     "lambda formula, result, context: is_prime(result) and (result - 1) % 4 == 0"
+  ],
   "link" : "https://www.youtube.com/watch?v=SyJlRUBoVp0",
   "title": "The Prime Problem with a One Sentence Proof",
   "host" : ["Matthias Kreck"],
@@ -5490,5 +5492,19 @@
   "host" : ["Ed Copeland"],
   "date" : "Jan 24, 2021",
   "source":"Numberphile"
+ },
+ {"test" : [
+     "lambda formula, result, context: is_random(formula, result) or is_error(result)",
+     "lambda formula, result, context: is_close(result, (20/423, 20/423, stats.binom.pmf(42, 262, 20/423), stats.binom.pmf(42, 262, 20/423)*100, 1-stats.binom.cdf(41, 262, 20/423), (1-stats.binom.cdf(41, 262, 20/423))*100, 1/(1-stats.binom.cdf(41, 262, 20/423))), 1e-2, 'pct')",
+     "lambda formula, result, context: is_close(result, (0.5, 50, 1-stats.binom.cdf(210, 305, 0.5), 1/(1-stats.binom.cdf(210, 305, 0.5))), 1e-2, 'pct')",
+     "lambda formula, result, context: is_close(result, ((1-stats.binom.cdf(41, 262, 20/423)) * (1-stats.binom.cdf(210, 305, 0.5)), 1/((1-stats.binom.cdf(41, 262, 20/423)) * (1-stats.binom.cdf(210, 305, 0.5)))), 1e-2, 'pct')",
+     "lambda formula, result, context: is_close(result, (8e-10, N('3.1536e19')), 1e-2, 'pct')",
+     "lambda formula, result, context: result in (20, 6, 262, 12, 42, 305, N('152.5'), 211, 42, ), 262)",
+     ],
+  "link" : "https://www.youtube.com/watch?v=8Ko3TdPy0TU",
+  "title": "How lucky is too lucky?: The Minecraft Speedrunning Dream Controversy Explained",
+  "host" : ["Matt Parker"],
+  "date" : "Feb 4, 2021",
+  "source":"standupmaths"
  }
 ]

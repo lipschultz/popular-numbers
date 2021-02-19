@@ -5,6 +5,8 @@ import time
 from fractions import Fraction
 from pathlib import Path
 
+from scipy import stats
+
 
 def is_int(val):
     """ Returns True if val is an int or a float with 0 fractional part """
