@@ -82,7 +82,7 @@ class YoutubeVideo(NumberCollection):
 
     @classmethod
     def load_file(cls, filename):
-        with open(filename) as fp:
+        with open(filename, 'rb') as fp:
             contents = json.load(fp)
 
         return [cls.from_json_dict(d) for d in contents] + [MagicSquare()]
