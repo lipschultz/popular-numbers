@@ -265,8 +265,10 @@ def is_close(num1, num2, threshold=1e-5, method='raw'):
                 return True
             else:
                 return abs(num1 - num2) / max([abs(v) for v in (num1, num2) if v != 0]) < threshold
-        else:
+        elif method == 'raw':
             return abs(num1 - num2) < threshold
+        else:
+            raise ValueError(f'Unrecognized method: {method}')
 
 
 def farey_addition(context):
