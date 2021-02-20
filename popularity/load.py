@@ -94,7 +94,7 @@ class MagicSquare(YoutubeVideo):
     """
 
     def __init__(self):
-        self.host = 'Matt Parker'
+        self.host = ['Matt Parker']
         self.date = 'Apr 19, 2016'
         self.weight = 1
 
