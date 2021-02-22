@@ -1,6 +1,7 @@
 import sqlite3
 from multiprocessing import freeze_support
 
+from popularity import database
 from popularity.compute_popularity import single_process
 from popularity.number_generator import NumberGenerator
 
@@ -25,16 +26,8 @@ def main():
 
     run_pie = NumberGenerator(1.7, 4.2, 5, 0, 0, 0, skip=reals_run)
 
-    conn = sqlite3.connect(db_url)
-    with conn:
-        conn.execute('''
-        CREATE TABLE IF NOT EXISTS popularity (
-            real NUMERIC,
-            imag NUMERIC,
-            link TEXT,
-            source TEXT,
-            PRIMARY KEY (real, imag, link)
-        );''')
+    conn = database.connect(db_url)
+    database.init_db(conn)
 
     results = single_process(youtube_file, reals_run, conn)
     conn.close()
