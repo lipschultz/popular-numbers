@@ -2,11 +2,14 @@ import functools
 import itertools
 import math
 import time
-from decimal import Decimal as N
+# from decimal import Decimal as N
 from fractions import Fraction
 from pathlib import Path
 
 from scipy import stats
+
+
+N = float
 
 
 def is_int(val):
