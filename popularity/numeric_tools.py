@@ -2,6 +2,7 @@ import functools
 import itertools
 import math
 import time
+from decimal import Decimal as N
 from fractions import Fraction
 from pathlib import Path
 
@@ -64,6 +65,10 @@ def is_number(val):
 def is_error(val):
     """ Returns True if val is a ComputationError. """
     return isinstance(val, Exception)
+
+
+def is_random(formula, result):
+    return result == 'random'
 
 
 GOLDEN_RATIO = (1 + 5 ** 0.5) / 2
