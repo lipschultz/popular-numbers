@@ -1,9 +1,9 @@
 import sqlite3
-from multiprocessing import freeze_support
 
 from popularity import database
-from popularity.compute_popularity import single_process
-from popularity.number_generator import NumberGenerator
+from popularity import load
+from popularity.compute_popularity import loop_over_tests
+from popularity.number_generator import SimpleNumberGenerator as NumberGenerator
 
 
 def main():
@@ -11,30 +11,20 @@ def main():
 
     db_url = r'results.db'
     reals_run = NumberGenerator(
-        -10_000, -9_999, 2,  # Real
+        -10_000, -9_999, 1,  # Real
         0, 0, 1,  # Imaginary
-        db_url=db_url
     )
-
-    imaginary_run = NumberGenerator(
-        0, 0, 1,  # Real
-        -10_000, -9_999, 2,  # Imaginary
-        db_url=db_url
-    )
-
-    complex_run = NumberGenerator(-10_000, 10_000, 2, db_url=db_url)
-
-    run_pie = NumberGenerator(1.7, 4.2, 5, 0, 0, 0, skip=reals_run)
 
     conn = database.connect(db_url)
     database.init_db(conn)
+    loaded_videos = load.YoutubeVideo.load_file(youtube_file)
+    sources_to_ids = database.youtube_sources_to_id(conn, loaded_videos)
 
-    results = single_process(youtube_file, reals_run, conn)
+    results = loop_over_tests(youtube_file, reals_run, sources_to_ids, conn)
     conn.close()
 
     return results
 
 
 if __name__ == '__main__':
-    freeze_support()
     results = main()

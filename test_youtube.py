@@ -1,4 +1,5 @@
 import math
+from collections import defaultdict
 
 from popularity import numeric_tools
 from popularity.compute_popularity import single_process
@@ -6,6 +7,7 @@ from popularity.compute_popularity import single_process
 
 def main():
     youtube_file = 'data/youtube.json'
+    any_source_to_id = defaultdict(lambda: 1)
 
     numbers = [
         0,
@@ -41,7 +43,7 @@ def main():
 
     run = iter(numbers)
 
-    results = single_process(youtube_file, run, None)
+    results = single_process(youtube_file, run, any_source_to_id, None)
     return results
 
 
