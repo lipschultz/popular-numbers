@@ -571,7 +571,7 @@
  {"test" : "lambda formula, result, context: is_error(result)",
   "link" : "https://www.youtube.com/watch?v=v678Em6qyzk",
   "title": "Wrong Turn on the Dragon",
-  "host" : ["Don Knuth"],
+  "host" : ["Donald Knuth"],
   "date" : "Dec 30, 2014",
   "source":"Numberphile"
  },
@@ -1617,7 +1617,7 @@
  {"test" : "lambda formula, result, context: result in {4, 8, 550, 890, 10, 13}",
   "link" : "https://www.youtube.com/watch?v=uak-wvXJAvE",
   "title": "Kids get their money",
-  "host" : ["Brady Haran", "Danny", "Emily"],
+  "host" : ["Brady Haran", "Danny (Brady's Neighbor)", "Emily (Brady's Neighbor)"],
   "date" : "Dec 17, 2012",
   "source":"Numberphile"
  },
@@ -1713,7 +1713,7 @@
  {"test" : "lambda formula, result, context: result in {I, 2, 17, 13, 7, 27, 21, 1024, 16, 37, 1729, 0}",
   "link" : "https://www.youtube.com/watch?v=ygqIfLHGTu4",
   "title": "Favourite Numbers",
-  "host" : ["Brady Haran", "Derek Muller", "Hank Green", "Steve Spangler", "Michael Stevens", "Angela", "Alex", "Destin Sandlin", "Mike Rugnetta", "Caitlin", "John Green", "Henry Reich", "Patrick", "CGP Grey", "Vi Hart"],
+  "host" : ["Brady Haran", "Derek Muller", "Hank Green", "Steve Spangler", "Michael Stevens", "Angela from YouTube EDU", "Alex Dainis", "Destin Sandlin", "Mike Rugnetta", "Caitlin from YouTube EDU", "John Green", "Henry Reich", "PatrickJMT", "CGP Grey", "Vi Hart"],
   "date" : "Nov 1, 2012",
   "source":"Numberphile",
   "note" : "includes j and *, which are weird numbers"
@@ -2098,7 +2098,7 @@
  {"test" : "lambda formula, result, context: is_close(result, math.pi)",
   "link" : "https://www.youtube.com/watch?v=wPn4tgmU8ek",
   "title": "Sounds of Pi",
-  "host" : ["Philip Moriarty"],
+  "host" : ["Phil Moriarty"],
   "date" : "Mar 12, 2012",
   "source":"Numberphile"
  },
@@ -3226,7 +3226,7 @@
  {"test" : "lambda formula, result, context: (is_int(result) and result < 30) or result in {13, 20, 24, 41, 36.837, 17.368, 1.58, 2.74, 29.16, 125} or is_error(result)",
   "link" : "https://www.youtube.com/watch?v=NzfSombRHIM",
   "title": "UK Rubik’s Cube Championship 2016 PART I",
-  "host" : ["Matt Parker", "Callum Hales-Jepp", "Elizabeth"],
+  "host" : ["Matt Parker", "Callum Hales-Jepp", "Elizabeth at the UK Rubik’s Cube Championship 2016"],
   "date" : "May 22, 2017",
   "source":"standupmaths"
  },
@@ -4342,7 +4342,7 @@
  {"test" : "lambda formula, result, context: result in {100, 1, 3, 2, 54, 1/54, 133, 38, 43, 52, 14, 38, 12, 11, 15, 5, 16}",
   "link" : "https://www.youtube.com/watch?v=KmjGQBNEayQ",
   "title": "Can animals predict the future? Meet Barry the Psychic Labrador!",
-  "host" : ["Matt Parker", "Barry the Psychic Labrador", "Nigel", "Katie"],
+  "host" : ["Matt Parker", "Barry the Psychic Labrador", "Nigel (part of Barry's family)", "Katie (part of Barry's family)"],
   "date" : "Jul 7, 2018",
   "source":"standupmaths"
  },
@@ -4798,14 +4798,14 @@
  {"test" : "lambda formula, result, context: result == 3141592",
   "link" : "https://www.youtube.com/watch?v=__UlMppZZgs",
   "title": "Pi Million Subscribers",
-  "host" : ["Bobak Ferdowsi", "Henry Reich", "Dave Brown", "Alex Dainis", "Bobby Wilson", "Matt Parker", "Captain Disillusion", "Jenny Hammerton", "Jason Davison", "Martyn Poliakoff", "John Green", "Bethany Palumbo", "James Maynard", "Helen Arney", "Katie Mack", "Patreon supporters", "Alex Bellos", "Scott Manley", "Pete McPartlan", "Grant Sanderson", "Joe Hanson", "Colin Wright", "Pete Watts", "Hannah Fry", "Sarah Wiseman", "Simon Clark", "Emily Calandrelli", "Matt Whitman", "Phil Moriarty", "James Hennessy", "Steve Mould", "Dianna Cowern", "Carlo Séquin", "Emily Graslie", "Tony Padilla", "Alex", "Cliff Stoll", "Jabrils", "Kevin Lieber", "Ed Copeland", "Johnny Ball", "Sean Riley", "Kurzgesagt", "Ken Ribet", "Jonathan Tallant", "Mike Pound", "CGP Grey", "Ron Graham", "Stephanie Kent", "Sabetta Matsumoto", "Brian McManus", "Seb", "Maggie Lieu", "Destin Sandlin", "Caleb Ashley", "John Urschel", "Federico Ardilla", "Tom Crawford", "Vi Hart", "Steve Bagley", "Ria Symonds", "J Willgoose Esq", "Hank Green", "David Eisenbud", "Daniel Erman", "Creepy Face Puppet", "Keith Moore", "Bobby Seagull", "Adam Savage", "Steven Strogatz", "Simon Singh", "Michael Stevens", "Neil Sloane", "Rob Eastaway", "Greg Foot", "Jake Roper", "Zvezdelina Stankova", "Stan Muller", "Susan Okereke", "Dabchick via Barnbaby Dixon", "Lê Nguyên Hoang", "Mark Rober", "Dave Brailsford", "Holly Krieger", "Ted Hamilton", "Maddie Moate", "Henry Segerman", "Laura Outterside", "James Grime", "Tim Hein", "Bruce Benamran", "Andrew Booker", "Calvin Lin", "Rob Miles", "Zandra Vinegar", "Derek Muller", "Daniel Litt", "Becky Smethurst", "Mike Merrifield", "Brady Haran", "Simon Pampena", "Logan Smalley", "Alan Stewart", "Tom Scott", "Katie Steckles", "Kylie Pentelow", "Ben Sparks", "Edward Frenkel", "Casandra Monroe"],
+  "host" : ["Bobak Ferdowsi", "Henry Reich", "Dave Brown", "Alex Dainis", "Bobby Wilson", "Matt Parker", "Captain Disillusion", "Jenny Hammerton", "Jason Davison", "Martyn Poliakoff", "John Green", "Bethany Palumbo", "James Maynard", "Helen Arney", "Katie Mack", "Patreon supporters", "Alex Bellos", "Scott Manley", "Pete McPartlan", "Grant Sanderson", "Joe Hanson", "Colin Wright", "Pete Watts", "Hannah Fry", "Sarah Wiseman", "Simon Clark", "Emily Calandrelli", "Matt Whitman", "Phil Moriarty", "James Hennessy", "Steve Mould", "Dianna Cowern", "Carlo Séquin", "Emily Graslie", "Tony Padilla", "Alex from LowSpecGamer", "Cliff Stoll", "Jabrils", "Kevin Lieber", "Ed Copeland", "Johnny Ball", "Sean Riley", "Kurzgesagt", "Ken Ribet", "Jonathan Tallant", "Mike Pound", "CGP Grey", "Ron Graham", "Stephanie Kent", "Sabetta Matsumoto", "Brian McManus", "Seb (Dinosaur)", "Maggie Lieu", "Destin Sandlin", "Caleb Ashley", "John Urschel", "Federico Ardila", "Tom Crawford", "Vi Hart", "Steve Bagley", "Ria Symonds", "J Willgoose Esq", "Hank Green", "David Eisenbud", "Daniel Erman", "Creepy Face Puppet", "Keith Moore", "Bobby Seagull", "Adam Savage", "Steven Strogatz", "Simon Singh", "Michael Stevens", "Neil Sloane", "Rob Eastaway", "Greg Foot", "Jake Roper", "Zvezdelina Stankova", "Stan Muller", "Susan Okereke", "Dabchick via Barnbaby Dixon", "Lê Nguyên Hoang", "Mark Rober", "Dave Brailsford", "Holly Krieger", "Ted Hamilton", "Maddie Moate", "Henry Segerman", "Laura Outterside", "James Grime", "Tim Hein", "Bruce Benamran", "Andrew Booker", "Calvin Lin", "Rob Miles", "Zandra Vinegar", "Derek Muller", "Daniel Litt", "Becky Smethurst", "Mike Merrifield", "Brady Haran", "Simon Pampena", "Logan Smalley", "Alan Stewart", "Tom Scott", "Katie Steckles", "Kylie Pentelow", "Ben Sparks", "Edward Frenkel", "Casandra Monroe"],
   "date" : "Dec 24, 2019",
   "source":"Numberphile"
  },
  {"test" : "lambda formula, result, context: result in range(10) or is_error(result)",
   "link" : "https://www.youtube.com/watch?v=Wrj1Kl6CHIQ",
   "title": "Counting Outtakes (from our Pi Million video)",
-  "host" : ["Bobak Ferdowsi", "Henry Reich", "Dave Brown", "Alex Dainis", "Bobby Wilson", "Matt Parker", "Captain Disillusion", "Jenny Hammerton", "Jason Davison", "Martyn Poliakoff", "John Green", "Bethany Palumbo", "James Maynard", "Helen Arney", "Katie Mack", "Patreon supporters", "Alex Bellos", "Scott Manley", "Pete McPartlan", "Grant Sanderson", "Joe Hanson", "Colin Wright", "Pete Watts", "Hannah Fry", "Sarah Wiseman", "Simon Clark", "Emily Calandrelli", "Matt Whitman", "Phil Moriarty", "James Hennessy", "Steve Mould", "Dianna Cowern", "Carlo Séquin", "Emily Graslie", "Tony Padilla", "Alex", "Cliff Stoll", "Jabrils", "Kevin Lieber", "Ed Copeland", "Johnny Ball", "Sean Riley", "Kurzgesagt", "Ken Ribet", "Jonathan Tallant", "Mike Pound", "CGP Grey", "Ron Graham", "Stephanie Kent", "Sabetta Matsumoto", "Brian McManus", "Seb", "Maggie Lieu", "Destin Sandlin", "Caleb Ashley", "John Urschel", "Federico Ardilla", "Tom Crawford", "Vi Hart", "Steve Bagley", "Ria Symonds", "J Willgoose Esq", "Hank Green", "David Eisenbud", "Daniel Erman", "Creepy Face Puppet", "Keith Moore", "Bobby Seagull", "Adam Savage", "Steven Strogatz", "Simon Singh", "Michael Stevens", "Neil Sloane", "Rob Eastaway", "Greg Foot", "Jake Roper", "Zvezdelina Stankova", "Stan Muller", "Susan Okereke", "Dabchick via Barnbaby Dixon", "Lê Nguyên Hoang", "Mark Rober", "Dave Brailsford", "Holly Krieger", "Ted Hamilton", "Maddie Moate", "Henry Segerman", "Laura Outterside", "James Grime", "Tim Hein", "Bruce Benamran", "Andrew Booker", "Calvin Lin", "Rob Miles", "Zandra Vinegar", "Derek Muller", "Daniel Litt", "Becky Smethurst", "Mike Merrifield", "Brady Haran", "Simon Pampena", "Logan Smalley", "Alan Stewart", "Tom Scott", "Katie Steckles", "Kylie Pentelow", "Ben Sparks", "Edward Frenkel", "Casandra Monroe"],
+  "host" : ["Bobak Ferdowsi", "Henry Reich", "Dave Brown", "Alex Dainis", "Bobby Wilson", "Matt Parker", "Captain Disillusion", "Jenny Hammerton", "Jason Davison", "Martyn Poliakoff", "John Green", "Bethany Palumbo", "James Maynard", "Helen Arney", "Katie Mack", "Patreon supporters", "Alex Bellos", "Scott Manley", "Pete McPartlan", "Grant Sanderson", "Joe Hanson", "Colin Wright", "Pete Watts", "Hannah Fry", "Sarah Wiseman", "Simon Clark", "Emily Calandrelli", "Matt Whitman", "Phil Moriarty", "James Hennessy", "Steve Mould", "Dianna Cowern", "Carlo Séquin", "Emily Graslie", "Tony Padilla", "Alex from LowSpecGamer", "Cliff Stoll", "Jabrils", "Kevin Lieber", "Ed Copeland", "Johnny Ball", "Sean Riley", "Kurzgesagt", "Ken Ribet", "Jonathan Tallant", "Mike Pound", "CGP Grey", "Ron Graham", "Stephanie Kent", "Sabetta Matsumoto", "Brian McManus", "Seb (Dinosaur)", "Maggie Lieu", "Destin Sandlin", "Caleb Ashley", "John Urschel", "Federico Ardila", "Tom Crawford", "Vi Hart", "Steve Bagley", "Ria Symonds", "J Willgoose Esq", "Hank Green", "David Eisenbud", "Daniel Erman", "Creepy Face Puppet", "Keith Moore", "Bobby Seagull", "Adam Savage", "Steven Strogatz", "Simon Singh", "Michael Stevens", "Neil Sloane", "Rob Eastaway", "Greg Foot", "Jake Roper", "Zvezdelina Stankova", "Stan Muller", "Susan Okereke", "Dabchick via Barnbaby Dixon", "Lê Nguyên Hoang", "Mark Rober", "Dave Brailsford", "Holly Krieger", "Ted Hamilton", "Maddie Moate", "Henry Segerman", "Laura Outterside", "James Grime", "Tim Hein", "Bruce Benamran", "Andrew Booker", "Calvin Lin", "Rob Miles", "Zandra Vinegar", "Derek Muller", "Daniel Litt", "Becky Smethurst", "Mike Merrifield", "Brady Haran", "Simon Pampena", "Logan Smalley", "Alan Stewart", "Tom Scott", "Katie Steckles", "Kylie Pentelow", "Ben Sparks", "Edward Frenkel", "Casandra Monroe"],
   "date" : "Dec 25, 2019",
   "source":"Numberphile"
  },
@@ -5242,7 +5242,7 @@
      ],
   "link" : "https://www.youtube.com/watch?v=BbnbfKbgf5Q",
   "title": "The Incredible 'Pick Any Card' Trick Explained!",
-  "host" : ["Matt Parker", "Mark"],
+  "host" : ["Matt Parker", "Mark (learner of Math)"],
   "date" : "Oct 30, 2020",
   "source":"standupmaths"
  },
