@@ -520,7 +520,7 @@
   "source":"Numberphile",
   "weight":0.5
  },
- {"test" : "lambda formula, result, context: result == random.random()",
+ {"test" : "lambda formula, result, context: is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=Obg7JPd6cmw",
   "title": "Should you catch a tossed coin?",
   "host" : ["Persi Diaconis"],
@@ -528,7 +528,7 @@
   "source":"Numberphile",
   "note" : "randomness"
  },
- {"test" : "lambda formula, result, context: (is_rational(result) and is_close(result, 0.51, 1e-3)) or result == random.random()",
+ {"test" : "lambda formula, result, context: (is_rational(result) and is_close(result, 0.51, 1e-3)) or is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=AYnJv68T3MM",
   "title": "How random is a coin toss?",
   "host" : ["Persi Diaconis"],
@@ -1068,7 +1068,7 @@
   "date" : "Dec 26, 2013",
   "source":"Numberphile"
  },
- {"test" : "lambda formula, result, context: result == random.random()",
+ {"test" : "lambda formula, result, context: is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=1O69uBL22nY",
   "title": "NSA Surveillance (an extra bit)",
   "host" : ["Edward Frenkel"],
@@ -1411,7 +1411,7 @@
   "date" : "Apr 23, 2013",
   "source":"Numberphile"
  },
- {"test" : "lambda formula, result, context: result == random.random() or '%' in formula",
+ {"test" : "lambda formula, result, context: is_random(formula, result) or '%' in formula",
   "link" : "https://www.youtube.com/watch?v=SxP30euw3-0",
   "title": "Random Numbers",
   "host" : ["James Clewett"],
@@ -1419,7 +1419,7 @@
   "source":"Numberphile",
   "note" : "randomness"
  },
- {"test" : "lambda formula, result, context: result == random.gauss(216, 7) or result == 216",
+ {"test" : "lambda formula, result, context: is_random(formula, result) or result == 216",
   "link" : "https://www.youtube.com/watch?v=noDSyLzVz2g",
   "title": "Random Numbers (the next bit)",
   "host" : ["James Clewett"],
@@ -2412,7 +2412,7 @@
   "date" : "Mar 8, 2013",
   "source":"standupmaths"
  },
- {"test" : "lambda formula, result, context: result in {27, random.randrange(1, 28), 49, random.randrange(1, 50), 2, 3}",
+ {"test" : "lambda formula, result, context: result in {27, random.randrange(1, 28), 49, random.randrange(1, 50), 2, 3} or is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=G_OuIVOGDr8",
   "title": "The 27 Card Trick",
   "host" : ["Matt Parker"],
@@ -3120,7 +3120,7 @@
   "notes": "Pascal's triangle",
   "wiki" : "https://en.wikipedia.org/wiki/Pascal%27s_triangle"
  },
- {"test" : "lambda formula, result, context: result in {500, 31, 27, 60, 10, 18, 23, 1, 38, 111, 114, 34, 98, 120, 15, 93, 12, 21, 113, 41, 169, 100, 24, 61, 45, 63, 322, 178, 1000} or (is_number(result) and is_close(result, 6 / math.pi**2, 0.028, 'pct'))",
+ {"test" : "lambda formula, result, context: result in {500, 31, 27, 60, 10, 18, 23, 1, 38, 111, 114, 34, 98, 120, 15, 93, 12, 21, 113, 41, 169, 100, 24, 61, 45, 63, 322, 178, 1000} or (is_number(result) and is_close(result, 6 / math.pi**2, 0.028, 'pct')) or is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=RZBhSi_PwHU",
   "title": "Generating π from 1,000 random numbers",
   "host" : ["Matt Parker"],
@@ -3192,7 +3192,7 @@
   "date" : "Apr 18, 2017",
   "source":"Numberphile"
  },
- {"test" : "lambda formula, result, context: result == random.randint(1, 6)",
+ {"test" : "lambda formula, result, context: result == random.randint(1, 6) or is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=kbKtFN71Lfs",
   "title": "Chaos Game",
   "host" : ["Ben Sparks"],
@@ -3587,7 +3587,7 @@
   "date" : "Nov 21, 2017",
   "source":"standupmaths"
  },
- {"test" : "lambda formula, result, context: result == random.random()",
+ {"test" : "lambda formula, result, context: is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=un-pTKfC1dQ",
   "title": "An unexpected way to inflate a balloon",
   "host" : ["Tadashi Tokieda"],
@@ -4048,7 +4048,7 @@
   "date" : "Dec 16, 2018",
   "source":"Numberphile"
  },
- {"test" : "lambda formula, result, context: result in {242830, 1048576, 478520} or result == random.random()",
+ {"test" : "lambda formula, result, context: result in {242830, 1048576, 478520} or is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=tP-Ipsat90c",
   "title": "Randomness is Random",
   "host" : ["Simon Pampena"],
@@ -4318,7 +4318,7 @@
   "date" : "Apr 4, 2018",
   "source":"standupmaths"
  },
- {"test" : "lambda formula, result, context: result in {3, 6} or result != random.random()",
+ {"test" : "lambda formula, result, context: result in {3, 6} or not is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=tQiiaFE1e-Y",
   "title": "Psychic Pets: can your pet predict the World Cup results?",
   "host" : ["Matt Parker", "Steve Mould", "Django", "Pablo the Wonder Chameleon"],
@@ -4695,7 +4695,7 @@
   "date" : "Aug 12, 2019",
   "source":"standupmaths"
  },
- {"test" : "lambda formula, result, context: (is_int(result) and 1 <= result <= 10) or result == random.random()",
+ {"test" : "lambda formula, result, context: (is_int(result) and 1 <= result <= 10) or is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=ZLTyX4zL2Fc",
   "title": "Can you solve The Frog Problem?",
   "host" : ["Matt Parker", "Timandra Harkness", "Bec Hill", "Rob West"],
@@ -4899,7 +4899,7 @@
   "date" : "Apr 3, 2020",
   "source":"standupmaths"
  },
- {"test" : "lambda formula, result, context: result == random.random() or is_close(result, (5.9604827, 6.6008077, 4.3016657, 0.2712588, 0.0184608, 0.0012537), 1e-7) or result in {100, 2, 3} or is_close(result, [0.2460931405] +[float(f'0.{i}451811228') for i in range(1, 4)], 1e-10)",
+ {"test" : "lambda formula, result, context: is_random(formula, result) or is_close(result, (5.9604827, 6.6008077, 4.3016657, 0.2712588, 0.0184608, 0.0012537), 1e-7) or result in {100, 2, 3} or is_close(result, [0.2460931405] +[float(f'0.{i}451811228') for i in range(1, 4)], 1e-10)",
   "link" : "https://www.youtube.com/watch?v=JaXo_i3ktwM",
   "title": "MPMP: Can you play Scrabble over a video call?",
   "host" : ["Matt Parker", "Vicki Pipe"],
@@ -4928,7 +4928,7 @@
   "date" : "Apr 28, 2020",
   "source":"standupmaths"
  },
- {"test" : "lambda formula, result, context: result in {0, 10, 52, 1/3_000_000} or result == random.random()",
+ {"test" : "lambda formula, result, context: result in {0, 10, 52, 1/3_000_000} or is_random(formula, result)",
   "link" : "https://www.youtube.com/watch?v=MrEECYAXRjs",
   "title": "Are Matt and James anti-psychic?",
   "host" : ["Matt Parker", "James Grime"],
@@ -5017,7 +5017,7 @@
   "date" : "Mar 1, 2020",
   "source":"Numberphile"
  },
- {"test" : "lambda formula, result, context: result == random.random() or is_close(result, 1.1319882487943)",
+ {"test" : "lambda formula, result, context: is_random(formula, result) or is_close(result, 1.1319882487943)",
   "link" : "https://www.youtube.com/watch?v=ELA8gNNMHoU",
   "title": "Random Fibonacci Numbers - Numberphile",
   "host" : ["James Grime"],
@@ -5261,7 +5261,8 @@
  {"test" : [
      "lambda formula, result, context: is_int(result) and result in (2**i - 1 for i in range(1, 20))",
      "lambda formula, result, context: is_real(result) and result in ((1/(i + 1)) for i in range(1, 20))",
-     "lambda formula, result, context: is_real(result) and result in ((1 - 1/(i + 1)) for i in range(1, 20))"
+     "lambda formula, result, context: is_real(result) and result in ((1 - 1/(i + 1)) for i in range(1, 20))",
+     "lambda formula, result, context: is_random(formula, result)"
      ],
   "link" : "https://www.youtube.com/watch?v=laAtv310pyk",
   "title": "Hat Problems",
