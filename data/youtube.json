@@ -5507,5 +5507,81 @@
   "host" : ["Matt Parker"],
   "date" : "Feb 4, 2021",
   "source":"standupmaths"
- }
+ },
+ {"test": [
+     "lambda formula, result, context: is_int(number) and 21 <= number <= 65"
+     ],
+  "link": "https://www.youtube.com/watch?v=aQxCnmhqZko",
+  "title": "Magic Square Party Trick",
+  "host": ["Matt Parker"],
+  "date": "Apr 19, 2016",
+  "source": "Numberphile"
+ },
+ {"test" : [
+     "lambda formula, result, context: is_close(result, math.pi)"
+     ],
+  "link" : "https://www.youtube.com/watch?v=BdHFLfv-ThQ",
+  "title": "Why π^π^π^π could be an integer (for all we know!).",
+  "host" : ["Matt Parker"],
+  "date" : "Feb 27, 2021",
+  "source":"standupmaths"
+ },
+ {"test": [
+     "lambda formula, result, context: is_error(result)",
+     "lambda formula, result, context: result in (1016, 1.05"
+     ],
+  "link": "https://www.youtube.com/watch?v=4EIkH9EEv78",
+  "title": "Annoying Puzzles (and Cognitive Reflection Problems)",
+  "host": ["Tim Harford"],
+  "date": "Jan 31, 2021",
+  "source": "Numberphile"
+ },
+ {"test": [
+     "lambda formula, result, context: result in (3_000_000, 120.6)",
+     "lambda formula, result, context: 1e9 <= result <= 1e11 or is_close(result, 2e17) or 80 <= result <= 120 or 80e-9 <= result <= 120e-9"
+     ],
+  "link": "https://www.youtube.com/watch?v=LVgBjRFSMYs",
+  "title": "All the World's Coronavirus fits in a Coke Can",
+  "host": ["Kit Yates"],
+  "date": "Mar 10, 2021",
+  "source": "Numberphile"
+ },
+ {"test": [
+     "lambda formula, result, context: result in (math.inf, math.pi)"
+     ],
+  "link": "https://www.youtube.com/watch?v=yZOi9HH5ueU",
+  "title": "Gabriel's Horn Paradox",
+  "host": ["Tom Crawford"],
+  "date": "Feb 18, 2021",
+  "source": "Numberphile"
+ },
+ {"test": [
+     "lambda formula, result, context: result in (0.02, 400, 5e-5, 0.1, 5e-6, 0.895, 6.022e23, 282.47, 9.55e15, 8, 5.235e-22, 6.5e-19, 8e-10, 6.2e-3, 3.875)",
+     "lambda formula, result, context: is_close(result, math.pi, (3.875-math.pi))"
+     ],
+  "link": "https://www.youtube.com/watch?v=lmgCgzjlWO4",
+  "title": "Calculating π with Avogadro's Number",
+  "host": ["Matt Parker", "Steve Mould"],
+  "date": "Mar 10, 2021",
+  "source": "standupmaths"
+ },
+ {"test": [
+     "lambda formula, result, context: is_rational(result) and result > 0"
+     ],
+  "link": "https://www.youtube.com/watch?v=RR3zzQP3bII",
+  "title": "Cuneiform Numbers",
+  "host": ["Alex Bellos"],
+  "date": "Mar 15, 2021",
+  "source": "Numberphile",
+  "note": "base 60"
+ },
+ {"test": [
+     "lambda formula, result, context: is_real(result) and result >= 0"
+     ],
+  "link": "https://www.youtube.com/watch?v=VTdVPNvwULM",
+  "title": "Nightingale Diagrams",
+  "host": ["Mike Merrifield"],
+  "date": "Mar 18, 2021",
+  "source": "Numberphile"
+ },
 ]
