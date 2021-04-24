@@ -5517,7 +5517,7 @@
   "date": "Apr 19, 2016",
   "source": "Numberphile"
  },
- {"test" : [
+ {"test": [
      "lambda formula, result, context: is_close(result, math.pi)"
      ],
   "link" : "https://www.youtube.com/watch?v=BdHFLfv-ThQ",
@@ -5584,4 +5584,51 @@
   "date": "Mar 18, 2021",
   "source": "Numberphile"
  },
+ {"test": [
+     "lambda formula, result, context: 'log' in formula",
+     "lambda formula, result, context: is_prime(result)",
+     "lambda formula, result, context: result == 1 or (is_int(result) and result % 2 == 0)"
+     ],
+  "link": "https://www.youtube.com/watch?v=SMsTXQYgbiQ",
+  "title": "Exploring the mysteries of the Prime (gaps!) Line.",
+  "host": ["Matt Parker"],
+  "date": "Apr 6, 2021",
+  "source": "standupmaths",
+  "oeis": ["https://oeis.org/A001223", "https://oeis.org/A002110"],
+  "wiki": ["https://en.wikipedia.org/wiki/Prime_gap", "https://en.wikipedia.org/wiki/Primorial"]
+ },
+ {"test": [
+     "lambda formula, result, context: is_random(formula, result)",
+     "lambda formula, result, context: result == 2_235_197_406_895_366_368_301_559_999",
+     "lambda formula, result, context: result in (36085481721713375974666734560870400000000, 2_235_197_406_895_366_368_301_560_000, 8, 52)",
+     "lambda formula, result, context: is_close(result, 4.473877774352714e-28)"
+     ],
+  "link": "https://www.youtube.com/watch?v=s9-b-QJZdVA",
+  "title": "How did the 'impossible' Perfect Bridge Deal happen?",
+  "host": ["Matt Parker"],
+  "date": "Apr 22, 2021",
+  "source": "standupmaths"
+ },
+ {"test": [
+     "lambda formula, result, context: result in (1,2,2,3,4,7,14,42,213,2837,175450,139759600, 6837625106787,266437144916648607844, 508009471379488821444261986503540, 37745517525533091954736701257541238885239740313139682, 5347426383812697233786139576220450142250373277499130252554080838158299886992660750432)"
+     ],
+  "link": "https://www.youtube.com/watch?v=KNjPPFyEeLo",
+  "title": "The Levine Sequence",
+  "host": ["Neil Sloane"],
+  "date": "Mar 31, 2021",
+  "source": "Numberphile",
+  "oeis": "https://oeis.org/A011784"
+ },
+ {"test": [
+     "lambda formula, result, context: result in (3,4,6,8,12,14,18,20,24,30,32,38,42,44,48,54,60,62,68,72,74,80,84,90,98,102,104,108,110,114,128,132,138,140,150,152,158,164,168,174,180,182,192,194,198,200,212,224,228,230,234,240,242,252,258,264,270,272,278,282,284)",
+     "lambda formula, result, context: result in (5,8,12,18,24,30,36,42,52,60,68,78,84,90,100,112,120,128,138,144,152,162,172,186,198,204,210,216,222,240,258,268,276,288,300,308,320,330,340,352,360,372,384,390,396,410,434,450,456,462,472,480,492,508,520)"
+     ],
+  "link": "https://www.youtube.com/watch?v=6X2D497is6Y",
+  "title": "Eureka Sequences",
+  "host": ["Neil Sloane"],
+  "date": "Apr 13, 2021",
+  "source": "Numberphile",
+  "oeis": ["https://oeis.org/A008864", "https://oeis.org/A001043"]
+ }
+
 ]
