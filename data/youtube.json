@@ -5629,6 +5629,64 @@
   "date": "Apr 13, 2021",
   "source": "Numberphile",
   "oeis": ["https://oeis.org/A008864", "https://oeis.org/A001043"]
+ },
+ {"test": [
+     "lambda formula, result, context: result in range(1, 6+1)",
+     "lambda formula, result, context: is_close(result, ((5/6)**n * 4 * n for n in range(1, 20)))",
+     "lambda formula, result, context: result < 20 or result == 20",
+     "lambda formula, result, context: result in (65, 20, 9, 4, 1, 0.65, 0.2, 0.09, 0.04, 0.01)"
+     ],
+  "link": "https://www.youtube.com/watch?v=ULhRLGzoXQ0",
+  "title": "The Math of Being a Pig",
+  "host": ["Ben Sparks"],
+  "date": "Apr 28, 2021",
+  "source": "Numberphile"
+ },
+ {"test": [
+     "lambda formula, result, context: result in (1, 2, 6, 21, 85, 430, 2586, 18109, 144880, 1303929, 13039300, 143432311, 1721187744, 22375440685, 313256169604, 4698842544075, 75181480705216, 1278085171988689, 23005533095796420, 437105128820131999, 8742102576402640000, 183584154104455440021, 4038851390298019680484)"
+     ],
+  "link": "https://www.youtube.com/watch?v=0zT16q3p24M",
+  "title": "A Sequence with a Mistake",
+  "host": ["Neil Sloane"],
+  "date": "May 12, 2021",
+  "source": "Numberphile",
+  "oeis": "https://oeis.org/A090805"
+ },
+ {"test": [
+     "lambda formula, result, context: result in (2**(k) - 1 for k in range(1, 21)) or result == 1",
+     "lambda formula, result, context: result in ((1 - 1/n) for n in range(1, 10001))",
+     "lambda formula, result, context: result in ((1 - 1/n)**n for n in range(1, 10001))",
+     "lambda formula, result, context: is_close(result, 1/e)"
+     ],
+  "link": "https://www.youtube.com/watch?v=zTsRGQj6VT4",
+  "title": "Gambling with the Martingale Strategy",
+  "host": ["Tom Crawford"],
+  "date": "May 16, 2021",
+  "source": "Numberphile"
+ },
+ {"test": [
+     "lambda formula, result, context: is_rational(result) and result > 0"
+     ],
+  "link": "https://www.youtube.com/watch?v=GAcUZ3my6E0",
+  "title": "Parabolas and Archimedes",
+  "host": ["Johnny Ball"],
+  "date": "May 23, 2021",
+  "source": "Numberphile"
+ },
+ {"test": [
+     "lambda formula, result, context: result in (1, 2, 2, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 19)",
+     "lambda formula, result, context: result in (2, 3, 4, 4, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 19, 19, 19, 19, 19)",
+     "lambda formula, result, context: result in (0, 0, 0, 1, 0, 0, 1, 3, 0, 0, 0, 1, 2, 1, 3, 7, 0, 0, 0, 1, 0, 0, 1, 3, 4, 2, 1, 3, 6, 3, 7, 15, 0, 0, 0, 1, 0, 0, 1, 3, 0, 0, 0, 1, 2, 1, 3, 7, 8, 4, 2, 5, 2, 1, 3, 7, 12, 6, 3, 7, 14, 7, 15, 31, 0, 0, 0, 1, 0, 0, 1, 3, 0, 0, 0, 1, 2, 1, 3, 7, 0, 0, 0, 1, 0, 0, 1, 3, 4, 2, 1, 3, 6, 3, 7, 15, 16)",
+     "lambda formula, result, context: result in ((3/2)**(k-2) - 1/2 for k in range(2, 22))",
+     "lambda formula, result, context: is_int(result) and result >= 0",
+     "lambda formula, result, context: result in ()",
+     ],
+  "link": "https://www.youtube.com/watch?v=R4OvBB9KHMA",
+  "title": "Planing Sequences (Le Rabot)",
+  "host": ["Neil Sloane"],
+  "date": "Jun 3, 2021",
+  "source": "Numberphile",
+  "oeis": ["https://oeis.org/A001462", "https://oeis.org/A319434", "https://oeis.org/A318921", "https://oeis.org/A027649"]
  }
 
 ]
