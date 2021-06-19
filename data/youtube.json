@@ -5528,7 +5528,7 @@
  },
  {"test": [
      "lambda formula, result, context: is_error(result)",
-     "lambda formula, result, context: result in (1016, 1.05"
+     "lambda formula, result, context: result in (1016, 1.05)"
      ],
   "link": "https://www.youtube.com/watch?v=4EIkH9EEv78",
   "title": "Annoying Puzzles (and Cognitive Reflection Problems)",
@@ -5538,7 +5538,7 @@
  },
  {"test": [
      "lambda formula, result, context: result in (3_000_000, 120.6)",
-     "lambda formula, result, context: 1e9 <= result <= 1e11 or is_close(result, 2e17) or 80 <= result <= 120 or 80e-9 <= result <= 120e-9"
+     "lambda formula, result, context: is_real(result) and (1e9 <= result <= 1e11 or is_close(result, 2e17) or 80 <= result <= 120 or 80e-9 <= result <= 120e-9)"
      ],
   "link": "https://www.youtube.com/watch?v=LVgBjRFSMYs",
   "title": "All the World's Coronavirus fits in a Coke Can",
