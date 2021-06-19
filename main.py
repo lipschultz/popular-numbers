@@ -2,7 +2,8 @@ import sqlite3
 
 from popularity import database
 from popularity import load
-from popularity.compute_popularity import loop_over_tests
+from popularity import compute_popularity
+from popularity.compute_popularity import loop_over_tests, loop_over_tests_parallel
 from popularity.number_generator import SimpleNumberGenerator as NumberGenerator
 
 
@@ -19,9 +20,10 @@ def main():
     database.init_db(conn)
     loaded_videos = load.YoutubeVideo.load_file(youtube_file)
     sources_to_ids = database.youtube_sources_to_id(conn, loaded_videos)
-
-    results = loop_over_tests(youtube_file, reals_run, sources_to_ids, conn)
     conn.close()
+
+    results = compute_popularity.loop_over_tests_map_async(reals_run, sources_to_ids, db_url)
+    # results = loop_over_tests(reals_run, sources_to_ids, db_url)
 
     return results
 

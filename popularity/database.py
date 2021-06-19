@@ -101,7 +101,7 @@ def youtube_sources_to_id(conn, loaded_videos=None, create=True):
     loaded_videos_to_add = [v for v in loaded_videos if v.link not in link_to_id]
     if create:
         with conn:
-            for video in tqdm(loaded_videos_to_add):
+            for video in tqdm(loaded_videos_to_add, desc='Creating NumberSet table'):
                 try:
                     cursor = conn.execute("INSERT INTO NumberSets(collection_id, label) VALUES(?, ?);", (youtube_collection_id, video.link))
                     number_set_id = cursor.lastrowid
@@ -120,8 +120,10 @@ def youtube_sources_to_id(conn, loaded_videos=None, create=True):
     return link_to_id
 
 
-def record_number_set_members(members: List[tuple], db_conn, *, n_attempts=5):
+def record_number_set_members(members: List[NumberSetElement], db_conn, *, n_attempts=5):
     if db_conn is None:
+        return
+    if len(members) == 0:
         return
 
     n_failures = 0
@@ -138,6 +140,11 @@ def record_number_set_members(members: List[tuple], db_conn, *, n_attempts=5):
                     members
                 )
                 return
+        except sqlite3.ProgrammingError as ex:
+            print(members)
+            print(len(members))
+            print(ex)
+            raise
         except sqlite3.OperationalError as ex:
             time.sleep(1)
             n_failures += 1

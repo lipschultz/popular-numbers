@@ -4,8 +4,79 @@ import random
 import re
 import sys
 
+from dateutil.parser import parse as date_parse
+
 # from popularity import numeric_tools
 from popularity.numeric_tools import *
+
+
+def youtube_json_to_py(input_filename, output_filename):
+    with open(input_filename, 'rb') as fp:
+        contents = json.load(fp)
+
+    functions = []
+    class_code = []
+    class_names = []
+    for i, element in enumerate(contents):
+        if 'init' in element:
+            functions.append(element['init'])
+
+        test = element['test']
+        if isinstance(test, str):
+            test = [test]
+        contains_method = f'''def contains(self, number):
+        try:
+            return any(t('', number, {{'result': [number]}}) for t in [{', '.join(t for t in test)}])
+        except (NameError, IndexError) as ex:
+            print(self)
+            raise ex
+        except OverflowError as ex:
+            return False
+'''
+
+        class_name = f'Youtube{i}'
+        class_names.append(class_name)
+
+        class_code.append(f'''
+class {class_name}(NumberCollection):
+    def __init__(self, number_set_id=None):
+        self.link = {element['link']!r}
+        self.title = {element['title']!r}
+        self.host = {element['host']!r}
+        self.date = {date_parse(element['date']).date().isoformat()!r}
+        self.source = {element['source']!r}
+        self.oeis = {element.get('oeis')!r}
+        self.wiki = {element.get('wiki')!r}
+        self.note = {element.get('note')!r}
+        self.number_set_id = number_set_id
+
+    {contains_method}
+''')
+
+    functions = '\n\n'.join(functions)
+    all_classes = '\n\n'.join(class_code)
+
+    file_contents = f'''
+import random
+import re
+import sys
+from fractions import Fraction
+
+from popularity.load import NumberCollection
+from popularity.numeric_tools import *
+
+
+{functions}
+
+{all_classes}
+
+
+ALL_CLASS_NAMES = [{', '.join(f'{name}' for name in class_names)}]
+ALL_TESTS = [t() for t in ALL_CLASS_NAMES]
+'''
+
+    with open(output_filename, 'w') as fp:
+        fp.write(file_contents)
 
 
 class NumberCollection:
