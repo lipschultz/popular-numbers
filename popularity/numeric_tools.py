@@ -3,7 +3,7 @@ import itertools
 import math
 import random
 import time
-# from decimal import Decimal as N
+from decimal import Decimal
 from fractions import Fraction
 from pathlib import Path
 
@@ -24,7 +24,7 @@ def is_rational(val):
 
     Determining irrationality is done through the is_irrational method.
     """
-    return isinstance(val, (int, float)) and not is_irrational(val)
+    return isinstance(val, (int, float, Decimal)) and not is_irrational(val)
 
 
 def is_irrational(val):
@@ -44,7 +44,7 @@ def is_transcendental(val):
 
 def is_real(val):
     """ Returns True if val is int or float. """
-    return isinstance(val, (int, float))
+    return isinstance(val, (int, float, Decimal))
 
 
 def is_complex(val):

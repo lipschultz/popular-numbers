@@ -57,6 +57,7 @@ class {class_name}(NumberCollection):
     all_classes = '\n\n'.join(class_code)
 
     file_contents = f'''
+import math
 import random
 import re
 import sys
