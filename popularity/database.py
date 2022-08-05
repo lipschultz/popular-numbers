@@ -150,3 +150,9 @@ def record_number_set_members(members: List[NumberSetElement], db_conn, *, n_att
             n_failures += 1
             last_exception = ex
     raise last_exception
+
+
+def merge_db_number_set_members(conn_read_from, conn_receiving):
+    with conn_receiving:
+        for row in tqdm(conn_read_from.execute("SELECT number_set_id, real, imag FROM NumberSetMembers;")):
+            conn_receiving.execute("INSERT INTO NumberSetMembers(number_set_id, real, imag) VALUES(?, ?, ?) ON CONFLICT DO NOTHING;", (row['number_set_id'], row['real'], row['imag']))

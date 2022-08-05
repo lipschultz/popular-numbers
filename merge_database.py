@@ -1,33 +1,19 @@
-import sqlite3
-from pathlib import Path
+import sys
 
 from tqdm import tqdm
 
-from popularity import database, load
-
-
-def translate_database(conn_old, conn_new, link_id_mapper):
-    with conn_new:
-        for row in tqdm(conn_old.execute("SELECT link, real, imag FROM popularity;")):
-            new_id = link_id_mapper[row['link']]
-            _ = conn_new.execute("INSERT INTO NumberSetMembers(number_set_id, real, imag) VALUES(?, ?, ?) ON CONFLICT DO NOTHING;", (new_id, row['real'], row['imag']))
+from popularity import database
 
 
 def main():
-    youtube_file = 'data/youtube.json'
-
-    out_db = 'merged.db'
-    
-    initialize_database = not Path(out_db).exists()
-    
-    conn = database.connect(out_db)
-    if initialize_database:
-        database.init_db(conn)
-    link_id_mapper = database.youtube_sources_to_id(conn, youtube_file)
-
-    conn.close()
-    return link_id_mapper
+    final_db = sys.argv[1]
+    final_conn = database.connect(final_db)
+    for other_db in sys.argv[2:]:
+        other_conn = database.connect(other_db)
+        database.merge_db_number_set_members(other_conn, final_conn)
+        other_conn.close()
+    final_conn.close()
 
 
 if __name__ == '__main__':
-    results = main()
+    main()
